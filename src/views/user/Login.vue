@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <a-form
+    <!-- <a-form
       id="formLogin"
       class="user-layout-login"
       ref="formLogin"
@@ -111,7 +111,7 @@
       :visible="stepCaptchaVisible"
       @success="stepCaptchaSuccess"
       @cancel="stepCaptchaCancel"
-    ></two-step-captcha>
+    ></two-step-captcha> -->
   </div>
 </template>
 
@@ -155,6 +155,9 @@ export default {
       })
     // this.requiredTwoStepCaptcha = true
   },
+  mounted () {
+    this.redirect()
+  },
   methods: {
     ...mapActions(['Login', 'Logout']),
     // handler
@@ -171,6 +174,26 @@ export default {
     handleTabClick (key) {
       this.customActiveKey = key
       // this.form.resetFields()
+    },
+    redirect () {
+      const {
+        state,
+        Login
+      } = this
+      state.loginBtn = true
+      const values = { password: 'ant.design',
+        username: 'admin' }
+      const loginParams = { ...values }
+      delete loginParams.username
+      loginParams[!state.loginType ? 'username' : 'username'] = values.username
+      loginParams.password = md5(values.password)
+      console.log(loginParams)
+      Login(loginParams)
+        .then((res) => this.loginSuccess(res))
+        .catch(err => this.requestFailed(err))
+        .finally(() => {
+          state.loginBtn = false
+        })
     },
     handleSubmit (e) {
       e.preventDefault()
@@ -250,7 +273,7 @@ export default {
     },
     loginSuccess (res) {
       console.log(res)
-      this.$router.push({ name: 'dashboard' }, () => {
+      this.$router.push({ name: 'aion' }, () => {
         this.$notification.success({
           message: '欢迎',
           description: `${timeFix()}，欢迎回来`

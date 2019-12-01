@@ -43,7 +43,7 @@ export default {
     mode: {
       type: String,
       // sidemenu, topmenu
-      default: 'sidemenu'
+      default: 'topmenu'
     },
     menus: {
       type: Array,

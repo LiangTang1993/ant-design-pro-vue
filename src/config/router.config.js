@@ -9,21 +9,21 @@ export const asyncRouterMap = [
     name: 'index',
     component: BasicLayout,
     meta: { title: '首页' },
-    redirect: '/dashboard/workplace',
+    redirect: '/aion/begin',
     children: [
-      // dashboard
+      // aion
       {
-        path: '/dashboard',
-        name: 'dashboard',
-        redirect: '/dashboard/workplace',
+        path: '/aion',
+        name: 'aion',
+        redirect: '/aion/begin',
         component: RouteView,
-        meta: { title: '仪表盘', keepAlive: true, icon: bxAnaalyse, permission: [ 'dashboard' ] },
+        meta: { title: '仪表盘', keepAlive: true, icon: bxAnaalyse, permission: [ 'aion' ] },
         children: [
           {
-            path: '/dashboard/analysis',
+            path: '/aion/analysis',
             name: 'Analysis',
             component: () => import('@/views/dashboard/Analysis'),
-            meta: { title: '分析页', keepAlive: false, permission: [ 'dashboard' ] }
+            meta: { title: '分析页', keepAlive: false, permission: [ 'aion' ] }
           },
           // 外部链接
           {
@@ -32,10 +32,10 @@ export const asyncRouterMap = [
             meta: { title: '监控页（外部）', target: '_blank' }
           },
           {
-            path: '/dashboard/workplace',
-            name: 'Workplace',
-            component: () => import('@/views/dashboard/Workplace'),
-            meta: { title: '工作台', keepAlive: true, permission: [ 'dashboard' ] }
+            path: '/aion/begin',
+            name: 'begin',
+            component: () => import('@/views/aion/begin'),
+            meta: { title: '工作台', keepAlive: true, permission: [ 'aion' ] }
           }
         ]
       },
@@ -262,14 +262,14 @@ export const asyncRouterMap = [
         path: '/other',
         name: 'otherPage',
         component: PageView,
-        meta: { title: '其他组件', icon: 'slack', permission: [ 'dashboard' ] },
+        meta: { title: '其他组件', icon: 'slack', permission: [ 'aion' ] },
         redirect: '/other/icon-selector',
         children: [
           {
             path: '/other/icon-selector',
             name: 'TestIconSelect',
             component: () => import('@/views/other/IconSelectorView'),
-            meta: { title: 'IconSelector', icon: 'tool', keepAlive: true, permission: [ 'dashboard' ] }
+            meta: { title: 'IconSelector', icon: 'tool', keepAlive: true, permission: [ 'aion' ] }
           },
           {
             path: '/other/list',

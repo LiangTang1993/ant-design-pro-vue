@@ -17,7 +17,7 @@ const app = {
     sidebar: true,
     device: 'desktop',
     theme: '',
-    layout: '',
+    layout: 'topmenu',
     contentWidth: '',
     fixedHeader: false,
     fixSiderbar: false,

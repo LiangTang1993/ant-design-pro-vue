@@ -48,7 +48,7 @@ export default {
               this.$router.push('/list/search/application')
               break
             default:
-              this.$router.push('/workplace')
+              this.$router.push('/begin')
           }
         }
       },

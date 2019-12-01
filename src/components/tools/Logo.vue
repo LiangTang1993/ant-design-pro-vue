@@ -1,19 +1,15 @@
 <template>
   <div class="logo">
-    <router-link :to="{name:'dashboard'}">
-      <LogoSvg alt="logo" />
-      <h1 v-if="showTitle">{{ title }}</h1>
+    <router-link :to="{name:'aion'}">
+      <img src="../../assets/logo.png" width="165px" height="64px" alt="logo" class="logo-size">
     </router-link>
   </div>
 </template>
 
 <script>
-import LogoSvg from '@/assets/logo.svg?inline'
-
 export default {
   name: 'Logo',
   components: {
-    LogoSvg
   },
   props: {
     title: {
@@ -29,3 +25,9 @@ export default {
   }
 }
 </script>
+<style>
+.logo-size{
+  width: 165px!important;
+  height: 64px!important;
+}
+</style>

@@ -1,6 +1,6 @@
 export default {
-  dashboard: {
-    workplace: {
+  aion: {
+    begin: {
       project: '項目數',
       teamRank: '團隊排名',
       views: '訪問量'

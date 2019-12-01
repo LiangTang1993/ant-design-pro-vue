@@ -1,6 +1,6 @@
 export default {
-  dashboard: {
-    workplace: {
+  aion: {
+    begin: {
       project: '...',
       teamRank: '...',
       views: '...'

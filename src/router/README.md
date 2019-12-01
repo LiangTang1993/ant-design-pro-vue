@@ -59,33 +59,33 @@ const asyncRouterMap = [
     name: 'index',
     component: BasicLayout,
     meta: { title: '首页' },
-    redirect: '/dashboard/analysis',
+    redirect: '/aion/analysis',
     children: [
       {
-        path: '/dashboard',
+        path: '/aion',
         component: RouteView,
-        name: 'dashboard',
-        redirect: '/dashboard/workplace',
-        meta: {title: '仪表盘', icon: 'dashboard', permission: ['dashboard']},
+        name: 'aion',
+        redirect: '/aion/begin',
+        meta: {title: '仪表盘', icon: 'aion', permission: ['aion']},
         children: [
           {
-            path: '/dashboard/analysis',
+            path: '/aion/analysis',
             name: 'Analysis',
             component: () => import('@/views/dashboard/Analysis'),
-            meta: {title: '分析页', permission: ['dashboard']}
+            meta: {title: '分析页', permission: ['aion']}
           },
           {
-            path: '/dashboard/monitor',
+            path: '/aion/monitor',
             name: 'Monitor',
             hidden: true,
-            component: () => import('@/views/dashboard/Monitor'),
-            meta: {title: '监控页', permission: ['dashboard']}
+            component: () => import('@/views/aion/Monitor'),
+            meta: {title: '监控页', permission: ['aion']}
           },
           {
-            path: '/dashboard/workplace',
-            name: 'Workplace',
-            component: () => import('@/views/dashboard/Workplace'),
-            meta: {title: '工作台', permission: ['dashboard']}
+            path: '/aion/begin',
+            name: 'begin',
+            component: () => import('@/views/aion/begin'),
+            meta: {title: '工作台', permission: ['aion']}
           }
         ]
       },

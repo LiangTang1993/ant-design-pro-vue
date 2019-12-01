@@ -15,7 +15,7 @@ const constantRouterComponents = {
   '500': () => import(/* webpackChunkName: "error" */ '@/views/exception/500'),
 
   // 你需要动态引入的页面组件
-  'Workplace': () => import('@/views/dashboard/Workplace'),
+  'begin': () => import('@/views/aion/begin'),
   'Analysis': () => import('@/views/dashboard/Analysis'),
 
   // form
@@ -52,7 +52,7 @@ const constantRouterComponents = {
   'BindingSettings': () => import('@/views/account/settings/Binding'),
   'NotificationSettings': () => import('@/views/account/settings/Notification'),
 
-  'TestWork': () => import(/* webpackChunkName: "TestWork" */ '@/views/dashboard/TestWork')
+  'TestWork': () => import(/* webpackChunkName: "TestWork" */ '@/views/aion/TestWork')
 }
 
 // 前端未找到页面路由（固定不用改）
@@ -66,7 +66,7 @@ const rootRouter = {
   name: 'index',
   path: '',
   component: 'BasicLayout',
-  redirect: '/dashboard',
+  redirect: '/aion',
   meta: {
     title: '首页'
   },
@@ -111,7 +111,7 @@ export const generator = (routerMap, parent) => {
   return routerMap.map(item => {
     const { title, show, hideChildren, hiddenHeaderContent, target, icon } = item.meta || {}
     const currentRouter = {
-      // 如果路由设置了 path，则作为默认 path，否则 路由地址 动态拼接生成如 /dashboard/workplace
+      // 如果路由设置了 path，则作为默认 path，否则 路由地址 动态拼接生成如 /aion/begin
       path: item.path || `${parent && parent.path || ''}/${item.key}`,
       // 路由名称，建议唯一
       name: item.name || item.key || '',

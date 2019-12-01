@@ -31,7 +31,7 @@ const info = (options) => {
     'deleted': 0,
     'permissions': [{
       'roleId': 'admin',
-      'permissionId': 'dashboard',
+      'permissionId': 'aion',
       'permissionName': '仪表盘',
       'actions': '[{"action":"add","defaultCheck":false,"describe":"新增"},{"action":"query","defaultCheck":false,"describe":"查询"},{"action":"get","defaultCheck":false,"describe":"详情"},{"action":"update","defaultCheck":false,"describe":"修改"},{"action":"delete","defaultCheck":false,"describe":"删除"}]',
       'actionEntitySet': [{
@@ -372,28 +372,28 @@ const info = (options) => {
 
 const userNav = (options) => {
   const nav = [
-    // dashboard
+    // aion
     {
-      'name': 'dashboard',
+      'name': 'aion',
       'parentId': -1,
       'id': 1,
       'meta': {
-        'icon': 'dashboard',
-        'title': '仪表盘',
+        'icon': 'aion',
+        'title': '开始',
         'show': true
       },
       'component': 'RouteView',
-      'redirect': '/dashboard/workplace'
+      'redirect': '/aion/begin'
     },
     {
-      'name': 'workplace',
+      'name': 'begin',
       'parentId': 1,
       'id': 7,
       'meta': {
-        'title': '工作台',
+        'title': '注册',
         'show': true
       },
-      'component': 'Workplace'
+      'component': 'begin'
     },
     {
       'name': 'monitor',
@@ -665,100 +665,100 @@ const userNav = (options) => {
         'show': true
       },
       'component': 'Exception500'
-    },
+    }
 
     // account
-    {
-      'name': 'account',
-      'parentId': -1,
-      'id': 10028,
-      'meta': {
-        'title': '个人页',
-        'icon': 'user',
-        'show': true
-      },
-      'redirect': '/account/center',
-      'component': 'RouteView'
-    },
-    {
-      'name': 'center',
-      'parentId': 10028,
-      'id': 10029,
-      'meta': {
-        'title': '个人中心',
-        'show': true
-      },
-      'component': 'AccountCenter'
-    },
-    // 特殊三级菜单
-    {
-      'name': 'settings',
-      'parentId': 10028,
-      'id': 10030,
-      'meta': {
-        'title': '个人设置',
-        'hideHeader': true,
-        'hideChildren': true,
-        'show': true
-      },
-      'redirect': '/account/settings/base',
-      'component': 'AccountSettings'
-    },
-    {
-      'name': 'BaseSettings',
-      'path': '/account/settings/base',
-      'parentId': 10030,
-      'id': 10031,
-      'meta': {
-        'title': '基本设置',
-        'show': false
-      },
-      'component': 'BaseSettings'
-    },
-    {
-      'name': 'SecuritySettings',
-      'path': '/account/settings/security',
-      'parentId': 10030,
-      'id': 10032,
-      'meta': {
-        'title': '安全设置',
-        'show': false
-      },
-      'component': 'SecuritySettings'
-    },
-    {
-      'name': 'CustomSettings',
-      'path': '/account/settings/custom',
-      'parentId': 10030,
-      'id': 10033,
-      'meta': {
-        'title': '个性化设置',
-        'show': false
-      },
-      'component': 'CustomSettings'
-    },
-    {
-      'name': 'BindingSettings',
-      'path': '/account/settings/binding',
-      'parentId': 10030,
-      'id': 10034,
-      'meta': {
-        'title': '账户绑定',
-        'show': false
-      },
-      'component': 'BindingSettings'
-    },
-    {
-      'name': 'NotificationSettings',
-      'path': '/account/settings/notification',
-      'parentId': 10030,
-      'id': 10034,
-      'meta': {
-        'title': '新消息通知',
-        'show': false
-      },
-      'component': 'NotificationSettings'
-    }
+    // {
+    //   'name': 'account',
+    //   'parentId': -1,
+    //   'id': 10028,
+    //   'meta': {
+    //     'title': '个人页',
+    //     'icon': 'user',
+    //     'show': true
+    //   },
+    //   'redirect': '/account/center',
+    //   'component': 'RouteView'
+    // },
+    // {
+    //   'name': 'center',
+    //   'parentId': 10028,
+    //   'id': 10029,
+    //   'meta': {
+    //     'title': '个人中心',
+    //     'show': true
+    //   },
+    //   'component': 'AccountCenter'
+    // },
+    // // 特殊三级菜单
+    // {
+    //   'name': 'settings',
+    //   'parentId': 10028,
+    //   'id': 10030,
+    //   'meta': {
+    //     'title': '个人设置',
+    //     'hideHeader': true,
+    //     'hideChildren': true,
+    //     'show': true
+    //   },
+    //   'redirect': '/account/settings/base',
+    //   'component': 'AccountSettings'
+    // },
+    // {
+    //   'name': 'BaseSettings',
+    //   'path': '/account/settings/base',
+    //   'parentId': 10030,
+    //   'id': 10031,
+    //   'meta': {
+    //     'title': '基本设置',
+    //     'show': false
+    //   },
+    //   'component': 'BaseSettings'
+    // },
+    // {
+    //   'name': 'SecuritySettings',
+    //   'path': '/account/settings/security',
+    //   'parentId': 10030,
+    //   'id': 10032,
+    //   'meta': {
+    //     'title': '安全设置',
+    //     'show': false
+    //   },
+    //   'component': 'SecuritySettings'
+    // },
+    // {
+    //   'name': 'CustomSettings',
+    //   'path': '/account/settings/custom',
+    //   'parentId': 10030,
+    //   'id': 10033,
+    //   'meta': {
+    //     'title': '个性化设置',
+    //     'show': false
+    //   },
+    //   'component': 'CustomSettings'
+    // },
+    // {
+    //   'name': 'BindingSettings',
+    //   'path': '/account/settings/binding',
+    //   'parentId': 10030,
+    //   'id': 10034,
+    //   'meta': {
+    //     'title': '账户绑定',
+    //     'show': false
+    //   },
+    //   'component': 'BindingSettings'
+    // },
+    // {
+    //   'name': 'NotificationSettings',
+    //   'path': '/account/settings/notification',
+    //   'parentId': 10030,
+    //   'id': 10034,
+    //   'meta': {
+    //     'title': '新消息通知',
+    //     'show': false
+    //   },
+    //   'component': 'NotificationSettings'
+    // }
   ]
   return builder(nav)
 }
