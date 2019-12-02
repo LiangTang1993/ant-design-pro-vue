@@ -25,17 +25,23 @@ export const asyncRouterMap = [
             component: () => import('@/views/dashboard/Analysis'),
             meta: { title: '分析页', keepAlive: false, permission: [ 'aion' ] }
           },
-          // 外部链接
-          {
-            path: 'https://www.baidu.com/',
-            name: 'Monitor',
-            meta: { title: '监控页（外部）', target: '_blank' }
-          },
+          // // 外部链接
+          // {
+          //   path: 'https://www.baidu.com/',
+          //   name: 'Monitor',
+          //   meta: { title: '监控页（外部）',  }
+          // },
           {
             path: '/aion/begin',
             name: 'begin',
             component: () => import('@/views/aion/begin'),
-            meta: { title: '工作台', keepAlive: true, permission: [ 'aion' ] }
+            meta: { title: '开始', keepAlive: true, permission: [ 'aion' ] }
+          },
+          {
+            path: '/aion/monitor',
+            name: 'Monitor',
+            component: () => import('@/views/aion/begin'),
+            meta: { title: '问题汇总', keepAlive: true, permission: [ 'aion' ] }
           }
         ]
       },

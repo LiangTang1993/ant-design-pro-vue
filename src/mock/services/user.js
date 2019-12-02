@@ -397,12 +397,10 @@ const userNav = (options) => {
     },
     {
       'name': 'monitor',
-      'path': 'https://www.baidu.com/',
       'parentId': 1,
       'id': 3,
       'meta': {
-        'title': '百度',
-        'target': '_blank',
+        'title': '问题汇总',
         'show': true
       }
     }

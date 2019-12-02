@@ -3,6 +3,7 @@
     <a-anchor :affix="false" class="anchor-div">
       <a-anchor-link href="#register" title="注册" />
       <a-anchor-link href="#account" title="账号相关" />
+      <a-anchor-link href="#jiasu" title="加速器" />
       <!-- <a-anchor-link href="#API" title="API">
         <a-anchor-link href="#Anchor-Props" title="Anchor Props" />
         <a-anchor-link href="#Link-Props" title="Link Props" />
@@ -106,13 +107,17 @@
             <p>登陆成功</p>
             <img src="../../assets/icons/accountinfo1.png" width="800px" height="300px" alt="">
             <img src="../../assets/icons/accountinfo2.png" width="420px" height="400px" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+          </a-card>
+        </a-col>
+        <a-col
+          :xl="24"
+          :lg="24"
+          :md="24"
+          :sm="24"
+          :xs="24"
+          id="jiasu">
+          <a-card :loading="loading" title="加速器" :bordered="false">
+            <p>俄服基本必须用加速器才能游戏，登录游戏尝试觉着不行买加速器，推荐使用腾讯加速器，<a href="https://jiasu.qq.com/?ADTAG=sem.baidu.ppc">点击购买</a></p>
           </a-card>
         </a-col>
       </a-row>
