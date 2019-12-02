@@ -1,6 +1,6 @@
 [English](./README.md) | 简体中文
 
-<h1 align="center">Ant Design Pro Vue</h1>
+<h1 align="center">AionLegend Vue</h1>
 <div align="center">
 An out-of-box UI solution for enterprise applications as a Vue boilerplate. based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a>
 </div>
@@ -23,7 +23,7 @@ An out-of-box UI solution for enterprise applications as a Vue boilerplate. base
 Overview
 ----
 
-基于 [Ant Design of Vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/) 实现的 [Ant Design Pro](https://pro.ant.design/) 
+基于 [Ant Design of Vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/) 实现的 [AionLegend](https://pro.ant.design/) 
 
 ![工作台-多标签模式](https://static-2.loacg.com/open/static/github/20190224163345.jpg)
 

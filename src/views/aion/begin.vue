@@ -1,5 +1,13 @@
 <template>
   <page-view :avatar="avatar" :title="false">
+    <a-anchor :affix="false" class="anchor-div">
+      <a-anchor-link href="#register" title="注册" />
+      <a-anchor-link href="#account" title="账号相关" />
+      <!-- <a-anchor-link href="#API" title="API">
+        <a-anchor-link href="#Anchor-Props" title="Anchor Props" />
+        <a-anchor-link href="#Link-Props" title="Link Props" />
+      </a-anchor-link> -->
+    </a-anchor>
     <div slot="headerContent">
       <div class="title">NC授权俄服，开服十年，巅峰在线3000+</div>
       <div style="font-size: 20px;height: 20px;">
@@ -16,7 +24,7 @@
           <template slot="title">
             <p>点击确认导航至百度云盘分享链接，</p>
             <p>提取码：kcc7</p>
-            <p>需要会员联系群主小小心情</p>
+            <p>需要超级会员联系群主小小心情</p>
           </template>
           <a style="display:block;float: left; margin-left: 10px;margin-top:2px;font-size: 14px;" >下载</a>
         </a-popconfirm>
@@ -39,7 +47,13 @@
 
     <div>
       <a-row :gutter="24">
-        <a-col :xl="24" :lg="24" :md="24" :sm="24" :xs="24">
+        <a-col
+          :xl="24"
+          :lg="24"
+          :md="24"
+          :sm="24"
+          :xs="24"
+          id="register">
           <a-card
             class="project-list"
             :loading="loading"
@@ -65,31 +79,40 @@
               <p>永久坐骑鸡</p>
               <p>永久报警自动拾取宠物</p>
               <p>永久岩浆翅膀外形</p>
-              <p>领取要求:满级前不得更换电脑登录也不可在此电脑登录其他账号,否则无法领取.</p>
+              <p style="color: red;">领取要求:满级前不得更换电脑登录也不可在此电脑登录其他账号,否则无法领取.</p>
               <p>打开链接后如果长时间都没有自动跳转则手动点击页面中蓝色链接如下图</p>
               <img src="../../assets/icons/yaoqing1.png" width="800px" height="500px" alt="">
               <p>跳转后页面如下</p>
               <img src="../../assets/icons/yaoqing2.png" width="800px" height="500px" alt="">
-              <p>输入注册邮箱点击创建，登录邮箱点击收到的邮件右键翻译。</p>
+              <p>输入注册邮箱点击创建，登录邮箱点击收到的邮件右键翻译。邮件可能会卡，卡的时候可能不能正常点击active链接，等网好吧！</p>
               <img src="../../assets/icons/active.png" width="500px" height="700px" alt="">
+              <p>至此创建完成</p>
             </div>
           </a-card>
 
-          <a-card :loading="loading" title="动态" :bordered="false">
-            <a-list>
-              <a-list-item :key="index" v-for="(item, index) in activities">
-                <a-list-item-meta>
-                  <a-avatar slot="avatar" :src="item.user.avatar" />
-                  <div slot="title">
-                    <span>{{ item.user.nickname }}</span>&nbsp;
-                    在&nbsp;<a href="#">{{ item.project.name }}</a>&nbsp;
-                    <span>{{ item.project.action }}</span>&nbsp;
-                    <a href="#">{{ item.project.event }}</a>
-                  </div>
-                  <div slot="description">{{ item.time }}</div>
-                </a-list-item-meta>
-              </a-list-item>
-            </a-list>
+        </a-col>
+        <a-col
+          :xl="24"
+          :lg="24"
+          :md="24"
+          :sm="24"
+          :xs="24"
+          id="account">
+          <a-card :loading="loading" title="账号信息" :bordered="false">
+            <p>邮箱里面的账号为论坛账号和游戏账号 初始是一样的，<a href="https://forum.aionlegend.im/index.php" target="_blank">点我进入官网</a> </p>
+            <img src="../../assets/icons/luntanhome.png" width="800px" height="300px" alt="">
+            <p>点击登入</p>
+            <img src="../../assets/icons/denglu.png" width="800px" height="400px" alt="">
+            <p>登陆成功</p>
+            <img src="../../assets/icons/accountinfo1.png" width="800px" height="300px" alt="">
+            <img src="../../assets/icons/accountinfo2.png" width="420px" height="400px" alt="">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
           </a-card>
         </a-col>
       </a-row>
@@ -285,6 +308,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+  .anchor-div{
+      position: fixed;
+      right: 20px;
+      z-index:999;
+      padding: 20px;
+    }
   .project-list {
 
     .card-title {

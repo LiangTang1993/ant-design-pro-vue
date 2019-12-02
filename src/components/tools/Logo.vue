@@ -14,7 +14,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Ant Design Pro',
+      default: 'AionLegend',
       required: false
     },
     showTitle: {
