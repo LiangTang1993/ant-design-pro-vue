@@ -403,7 +403,39 @@ const userNav = (options) => {
         'title': '问题汇总',
         'show': true
       }
+    },
+    {
+      'name': 'level',
+      'parentId': -1,
+      'id': 2,
+      'meta': {
+        'icon': 'begin',
+        'title': '升级',
+        'show': true
+      },
+      'component': 'RouteView',
+      'redirect': '/level/levelQuick'
+    },
+    {
+      'name': 'levelQuick',
+      'parentId': 2,
+      'id': 8,
+      'meta': {
+        'title': '疾速提升',
+        'show': true
+      },
+      'component': 'levelQuick'
+    },
+    {
+      'name': 'levelUp',
+      'parentId': 2,
+      'id': 9,
+      'meta': {
+        'title': '休闲升级',
+        'show': true
+      }
     }
+
     // {
     //   'name': 'analysis',
     //   'parentId': 1,

@@ -20,7 +20,7 @@
             alt="永恒之塔俄服一带一路"
             title="永恒之塔俄服一带一路"></a></div>
         <div style="float: left; margin: 2px 10px 0 10px;">941524284</div>
-        <a style="display:block;float: left; margin-left: 10px;margin-top:2px;font-size: 14px;" @click="register">邀请注册链接</a>
+        <a style="display:block;float: left; margin-left: 10px;margin-top:2px;font-size: 14px;" @click="register">注册</a>
         <a-popconfirm placement="bottom" okText="确定" cancelText="取消" @confirm="confirm">
           <template slot="title">
             <p>点击确认导航至百度云盘分享链接，</p>
@@ -60,64 +60,20 @@
             :loading="loading"
             style="margin-bottom: 24px;"
             :bordered="false"
-            title="注册须知"
+            title="快感体验 "
             :body-style="{ padding: 0 }">
             <div style="padding: 20px;">
-              <h3>注册推荐使用谷歌浏览器！</h3>
-              <p>在谷歌浏览器页面右键选项有翻译成中文选项，可将外语页面翻译为中文。</p>
-              <p>首先安装谷歌访问助手，因为是外网，不安装会导致无法登陆。</p>
-              <p>最新的安装谷歌访问助手2.3.0版本详细教程，旧方法已失效, 但是网上很多的教程或者安装插件包都已经失效了，因为浏览器现在不支持这么直接拖进去了。</p>
-              <p>1.群里下载谷歌访问助手，然后解压。</p>
-              <p>2.打开浏览器这里以谷歌浏览器和360急速浏览器为例
-                谷歌浏览器：点击右侧三个点点，找到更多工具，扩展中心
-                360急速浏览器：点击右侧三个横行，点击工具，管理扩展</p>
-              <img src="../../assets/icons/guge.png" alt="" width="500px" height="500px">
-              <p>3.点击加载已解压的扩展程序，选择我们刚刚下载解压后的文件夹即可，然后就安装成功了，如果没有显示可以重启一下浏览器</p>
-              <a-divider></a-divider>
-              <h3>注册： <a @click="register">点我注册</a></h3>
-              <p>注册成功满级可获得</p>
-              <p>闪耀大师30天</p>
-              <p>永久坐骑鸡</p>
-              <p>永久报警自动拾取宠物</p>
-              <p>永久岩浆翅膀外形</p>
-              <p style="color: red;">领取要求:满级前不得更换电脑登录也不可在此电脑登录其他账号,否则无法领取.</p>
-              <p>打开链接后如果长时间都没有自动跳转则手动点击页面中蓝色链接如下图</p>
-              <img src="../../assets/icons/yaoqing1.png" width="800px" height="500px" alt="">
-              <p>跳转后页面如下</p>
-              <img src="../../assets/icons/yaoqing2.png" width="800px" height="500px" alt="">
-              <p>输入注册邮箱点击创建，登录邮箱点击收到的邮件右键翻译。邮件可能会卡，卡的时候可能不能正常点击active链接，等网好吧！</p>
-              <img src="../../assets/icons/active.png" width="500px" height="700px" alt="">
-              <p>至此创建完成</p>
+              <P>各位新人大家好：</P>
+              <P>我是一名和大家一样热爱永恒的玩家K剑，欢迎大家来到俄服NC授权4.6大家庭，希望大家在此可以娱乐游戏，注意身体，开心生活，幸福安康！</P>
+              <P>我首先鼓励大家自由体验亚特雷亚各处自然人文风光，但是如果您时间有限，又想快速体验65级满级后与大家下本，PK，竞技场，要塞战的快感，那么我可以帮助大家快速满级，当然了，养家糊口，需要收费，收费如下：</P>
+              <P>1-50级，  100元   1天交付 </P>
+              <P>50-60级，100元   1天交付 </P>
+              <P>60-65级    80元    1天交付</P>
+              <P>1-65级     累加280  3天交付</P>
+              <P>（备注：此代练前提是，您已经开通好五倍经验，并且我登录您的账号双开服务，如果您需要的是私人VIP带着您打，您上账号升级服务则按一小时50收费，在私人VIP期间，一切听您指挥，按您指导，我专属于您一人）</P>
+              <P>祝大家在亚特雷亚玩得愉快~~谢谢大家~~     </P>  
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=703690864&site=qq&menu=yes" target="_blank">添加好友</a>       
             </div>
-          </a-card>
-
-        </a-col>
-        <a-col
-          :xl="24"
-          :lg="24"
-          :md="24"
-          :sm="24"
-          :xs="24"
-          id="account">
-          <a-card :loading="loading" title="账号信息" :bordered="false">
-            <p>邮箱里面的账号为论坛账号和游戏账号 初始是一样的，<a href="https://forum.aionlegend.im/index.php" target="_blank">点我进入官网</a> </p>
-            <img src="../../assets/icons/luntanhome.png" width="800px" height="300px" alt="">
-            <p>点击登入</p>
-            <img src="../../assets/icons/denglu.png" width="800px" height="400px" alt="">
-            <p>登陆成功</p>
-            <img src="../../assets/icons/accountinfo1.png" width="800px" height="300px" alt="">
-            <img src="../../assets/icons/accountinfo2.png" width="420px" height="400px" alt="">
-          </a-card>
-        </a-col>
-        <a-col
-          :xl="24"
-          :lg="24"
-          :md="24"
-          :sm="24"
-          :xs="24"
-          id="jiasu">
-          <a-card :loading="loading" title="加速器" :bordered="false">
-            <p>俄服基本必须用加速器才能游戏，登录游戏尝试觉着不行买加速器，推荐使用腾讯加速器，<a href="https://jiasu.qq.com/?ADTAG=sem.baidu.ppc">点击购买</a></p>
           </a-card>
         </a-col>
       </a-row>
