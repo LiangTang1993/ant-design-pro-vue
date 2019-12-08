@@ -434,6 +434,15 @@ const userNav = (options) => {
         'title': '休闲升级',
         'show': true
       }
+    },
+    {
+      'name': 'fiveExp',
+      'parentId': 2,
+      'id': 10,
+      'meta': {
+        'title': '五倍经验购买',
+        'show': true
+      }
     }
 
     // {

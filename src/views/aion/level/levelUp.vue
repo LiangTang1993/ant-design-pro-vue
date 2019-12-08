@@ -1,49 +1,9 @@
 <template>
   <page-view :avatar="avatar" :title="false">
     <a-anchor :affix="false" class="anchor-div">
-      <a-anchor-link href="#register" title="注册" />
-      <a-anchor-link href="#account" title="账号相关" />
-      <a-anchor-link href="#jiasu" title="加速器" />
-      <!-- <a-anchor-link href="#API" title="API">
-        <a-anchor-link href="#Anchor-Props" title="Anchor Props" />
-        <a-anchor-link href="#Link-Props" title="Link Props" />
-      </a-anchor-link> -->
+      <a-anchor-link href="#tianzu" title="天族" />
     </a-anchor>
     <div slot="headerContent">
-      <div class="title">NC授权俄服，开服十年，巅峰在线3000+</div>
-      <div style="font-size: 20px;height: 20px;">
-        <div style="float: left;"><a
-          target="_blank"
-          href="//shang.qq.com/wpa/qunwpa?idkey=a0d254136ae992173d14cfdb8ba216f8e29b2dedb4e359a5c82550e89c22f75b"><img
-            border="0"
-            src="//pub.idqqimg.com/wpa/images/group.png"
-            alt="永恒之塔俄服一带一路"
-            title="永恒之塔俄服一带一路"></a></div>
-        <div style="float: left; margin: 2px 10px 0 10px;">941524284</div>
-        <a style="display:block;float: left; margin-left: 10px;margin-top:2px;font-size: 14px;" @click="register">注册</a>
-        <a-popconfirm placement="bottom" okText="确定" cancelText="取消" @confirm="confirm">
-          <template slot="title">
-            <p>点击确认导航至百度云盘分享链接，</p>
-            <p>提取码：kcc7</p>
-            <p>需要超级会员联系群主小小心情 <a href="http://wpa.qq.com/msgrd?v=3&uin=173708480&site=qq&menu=yes" target="_blank">添加好友</a></p>
-          </template>
-          <a style="display:block;float: left; margin-left: 10px;margin-top:2px;font-size: 14px;" >下载</a>
-        </a-popconfirm>
-
-      </div>
-    </div>
-    <div slot="extra">
-      <!-- <a-row class="more-info">
-        <a-col :span="8">
-          <head-info :title="$t('aion.begin.project')" content="56" :center="false" :bordered="false"/>
-        </a-col>
-        <a-col :span="8">
-          <head-info :title="$t('aion.begin.teamRank')" content="8/24" :center="false" :bordered="false"/>
-        </a-col>
-        <a-col :span="8">
-          <head-info :title="$t('aion.begin.views')" content="2,223" :center="false" />
-        </a-col>
-      </a-row> -->
     </div>
 
     <div>
@@ -54,16 +14,47 @@
           :md="24"
           :sm="24"
           :xs="24"
-          id="register">
+          id="chonzhi">
           <a-card
             class="project-list"
             :loading="loading"
             style="margin-bottom: 24px;"
             :bordered="false"
-            title="暂未更新 "
+            title="天族"
+            id="tianzu"
             :body-style="{ padding: 0 }">
             <div style="padding: 20px;">
-                   
+              <p style="color: red;">买个五倍，使命能清都清掉。</p>
+              <p> 20级任务 不熟练的见习瞬间移动师 接了不要做 去魔族的任务</p>
+              <p><a href="http://aion.db.17173.com/quest.php?id=1037">LV30 地下神殿的秘密</a> </p>
+              <p><a href="http://aion.db.17173.com/quest.php?id=1037">LV48 地下神殿的秘密</a> </p>
+            </div>
+          </a-card>
+        </a-col>
+        <a-col
+          :xl="24"
+          :lg="24"
+          :md="24"
+          :sm="24"
+          :xs="24"
+          id="chonzhi">
+          <a-card
+            class="project-list"
+            :loading="loading"
+            style="margin-bottom: 24px;"
+            :bordered="false"
+            title="魔族"
+            id="tianzu"
+            :body-style="{ padding: 0 }">
+            <div style="padding: 20px;">
+              <p style="color: red;">买个五倍，能清都清掉</p>
+              <p>10级以下新手村随便打打!!这个不说了</p>
+              <p>10~25级，前期升级很快，黑脚、单人本、溶洞。</p>
+              <p>25~35级，25级OBS本，下1次差不多到27级，可以下火神了!火神30分钟CD时间，可以不停刷。</p>
+              <p>35~45级，35本可以，单刷毛也行，去OBS刷龙怪也不错!到40级可以去龙洞啊，T8.都行!</p>
+              <p>46~51级，46级天本，城塞也可以去下下!经验也不少!</p>
+              <p>52~60级，这个级别本最多了，大小W。寺院!等等!!!!一堆本。</p>
+              <p>60~65级，做做血斗，刷刷蓝图,做做任务，基本搞定了!</p>
             </div>
           </a-card>
         </a-col>

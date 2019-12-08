@@ -1,36 +1,6 @@
 <template>
   <page-view :avatar="avatar" :title="false">
-    <a-anchor :affix="false" class="anchor-div">
-      <a-anchor-link href="#register" title="注册" />
-      <a-anchor-link href="#account" title="账号相关" />
-      <a-anchor-link href="#jiasu" title="加速器" />
-      <!-- <a-anchor-link href="#API" title="API">
-        <a-anchor-link href="#Anchor-Props" title="Anchor Props" />
-        <a-anchor-link href="#Link-Props" title="Link Props" />
-      </a-anchor-link> -->
-    </a-anchor>
     <div slot="headerContent">
-      <div class="title">NC授权俄服，开服十年，巅峰在线3000+</div>
-      <div style="font-size: 20px;height: 20px;">
-        <div style="float: left;"><a
-          target="_blank"
-          href="//shang.qq.com/wpa/qunwpa?idkey=a0d254136ae992173d14cfdb8ba216f8e29b2dedb4e359a5c82550e89c22f75b"><img
-            border="0"
-            src="//pub.idqqimg.com/wpa/images/group.png"
-            alt="永恒之塔俄服一带一路"
-            title="永恒之塔俄服一带一路"></a></div>
-        <div style="float: left; margin: 2px 10px 0 10px;">941524284</div>
-        <a style="display:block;float: left; margin-left: 10px;margin-top:2px;font-size: 14px;" @click="register">注册</a>
-        <a-popconfirm placement="bottom" okText="确定" cancelText="取消" @confirm="confirm">
-          <template slot="title">
-            <p>点击确认导航至百度云盘分享链接，</p>
-            <p>提取码：kcc7</p>
-            <p>需要超级会员联系群主小小心情 <a href="http://wpa.qq.com/msgrd?v=3&uin=173708480&site=qq&menu=yes" target="_blank">添加好友</a></p>
-          </template>
-          <a style="display:block;float: left; margin-left: 10px;margin-top:2px;font-size: 14px;" >下载</a>
-        </a-popconfirm>
-
-      </div>
     </div>
     <div slot="extra">
       <!-- <a-row class="more-info">
@@ -70,9 +40,9 @@
               <P>50-60级，100元   1天交付 </P>
               <P>60-65级    80元    1天交付</P>
               <P>1-65级     累加280  3天交付</P>
-              <P>（备注：此代练前提是，您已经开通好五倍经验，并且我登录您的账号双开服务，如果您需要的是私人VIP带着您打，您上账号升级服务则按一小时50收费，在私人VIP期间，一切听您指挥，按您指导，我专属于您一人）</P>
-              <P>祝大家在亚特雷亚玩得愉快~~谢谢大家~~     </P>  
-              <a href="http://wpa.qq.com/msgrd?v=3&uin=703690864&site=qq&menu=yes" target="_blank">添加好友</a>       
+              <P>（备注：此代练前提是，您已经开通好五倍经验，并且我登录您的账号双开服务（双开会导致最终拜师失败），如果您需要的是私人VIP带着您打，您上账号升级服务则按一小时50收费(1-50级100)，在私人VIP期间，一切听您指挥，按您指导，我专属于您一人）</P>
+              <P>祝大家在亚特雷亚玩得愉快~~谢谢大家~~     </P>
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=703690864&site=qq&menu=yes" target="_blank">添加好友</a>
             </div>
           </a-card>
         </a-col>

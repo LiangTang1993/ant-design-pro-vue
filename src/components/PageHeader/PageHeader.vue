@@ -12,11 +12,31 @@
             </div>
           </div>
           <div class="row">
-            <div v-if="avatar" class="avatar">
-              <a-avatar :src="avatar" />
+            <div class="avatar">
+              <a-avatar src="/avatar2.jpg" />
             </div>
             <div v-if="this.$slots.content" class="headerContent">
               <slot name="content"></slot>
+              <div class="title">NC授权俄服，开服十年，巅峰在线3000+</div>
+              <div style="font-size: 20px;height: 20px;">
+                <div style="float: left;"><a
+                  target="_blank"
+                  href="//shang.qq.com/wpa/qunwpa?idkey=a0d254136ae992173d14cfdb8ba216f8e29b2dedb4e359a5c82550e89c22f75b"><img
+                    border="0"
+                    src="//pub.idqqimg.com/wpa/images/group.png"
+                    alt="永恒之塔俄服一带一路"
+                    title="永恒之塔俄服一带一路"></a></div>
+                <div style="float: left; margin: 2px 10px 0 10px;">941524284</div>
+                <a style="display:block;float: left; margin-left: 10px;margin-top:2px;font-size: 14px;" @click="register">邀请注册链接</a>
+                <a-popconfirm placement="bottom" okText="确定" cancelText="取消" @confirm="confirm">
+                  <template slot="title">
+                    <p>点击确认导航至百度云盘分享链接，</p>
+                    <p>提取码：kcc7</p>
+                    <p>需要超级会员联系群主小小心情 <a href="http://wpa.qq.com/msgrd?v=3&uin=173708480&site=qq&menu=yes" target="_blank">添加好友</a></p>
+                  </template>
+                  <a style="display:block;float: left; margin-left: 10px;margin-top:2px;font-size: 14px;" >游戏下载</a>
+                </a-popconfirm>
+              </div>
             </div>
             <div v-if="this.$slots.extra" class="extra">
               <slot name="extra"></slot>
@@ -58,6 +78,17 @@ export default {
   },
   data () {
     return {}
+  },
+  methods: {
+    register () {
+      window.open('https://www.aionlegend.im/r/?invite=NS1I27')
+    },
+    downLoad () {
+
+    },
+    confirm () {
+      window.open('https://pan.baidu.com/s/1yRMDPjybgT5v3vZDku8awQ ')
+    }
   }
 }
 </script>

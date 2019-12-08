@@ -1,28 +1,10 @@
 <template>
   <page-view :avatar="avatar" :title="false">
     <a-anchor :affix="false" class="anchor-div">
-      <a-anchor-link href="#register" title="游戏安装" />
-      <a-anchor-link href="#account" title="账号相关" />
-      <a-anchor-link href="#jiasu" title="加速器" />
-      <!-- <a-anchor-link href="#API" title="API">
-        <a-anchor-link href="#Anchor-Props" title="Anchor Props" />
-        <a-anchor-link href="#Link-Props" title="Link Props" />
-      </a-anchor-link> -->
+      <a-anchor-link href="#chonzhi" title="充值" />
+      <a-anchor-link href="#goumai" title="五倍购买" />
     </a-anchor>
     <div slot="headerContent">
-    </div>
-    <div slot="extra">
-      <!-- <a-row class="more-info">
-        <a-col :span="8">
-          <head-info :title="$t('aion.begin.project')" content="56" :center="false" :bordered="false"/>
-        </a-col>
-        <a-col :span="8">
-          <head-info :title="$t('aion.begin.teamRank')" content="8/24" :center="false" :bordered="false"/>
-        </a-col>
-        <a-col :span="8">
-          <head-info :title="$t('aion.begin.views')" content="2,223" :center="false" />
-        </a-col>
-      </a-row> -->
     </div>
 
     <div>
@@ -33,50 +15,51 @@
           :md="24"
           :sm="24"
           :xs="24"
-          id="register">
+          id="chonzhi">
           <a-card
             class="project-list"
+            :loading="loading"
             style="margin-bottom: 24px;"
             :bordered="false"
-            title="游戏安装"
-          >
+            title="充值"
+            :body-style="{ padding: 0 }">
             <div style="padding: 20px;">
-              <img src="../../assets/icons/lostfile.png" width="300px" height="300px" alt="">
-              <p>一般是因为解压时没有关闭杀毒软件，需要找回被删除的文件，Msg.dll</p>
+              <a href="https://cp.aionlegend.im/index.php" target="_blank">点我进入官网</a>
+              <p>国内白天登陆官网比较流畅 晚上巨卡 建议大家有什么账号操作都在白天做完</p>
+              <img src="../../../assets/icons/cz1.png" width="1100px" height="600" alt="">
+              <p>下一步</p>
+              <img src="../../../assets/icons/cz2.png" width="800px" height="400" alt="">
+              <p>下一步</p>
+              <img src="../../../assets/icons/cz3.png" width="800px" height="600" alt="">
+              <p>下一步</p>
+              <img src="../../../assets/icons/cz4.png" width="800px" height="600" alt="">
             </div>
           </a-card>
+        </a-col>
+        <a-row :gutter="24">
+          <a-col
+            :xl="24"
+            :lg="24"
+            :md="24"
+            :sm="24"
+            :xs="24"
+            id="goumai">
+            <a-card
+              class="project-list"
+              :loading="loading"
+              style="margin-bottom: 24px;"
+              :bordered="false"
+              title="五倍购买"
+              :body-style="{ padding: 0 }">
+              <div style="padding: 20px;">
+                <img src="../../../assets/icons/wupin2.png" width="500px" height="400" alt="">
+                <img src="../../../assets/icons/wupin1.png" width="1100px" height="600" alt="">
 
-        </a-col>
-        <a-col
-          :xl="24"
-          :lg="24"
-          :md="24"
-          :sm="24"
-          :xs="24"
-          id="account">
-          <a-card title="账号信息" :bordered="false">
-            <p>邮箱里面的账号为论坛账号和游戏账号 初始是一样的，<a href="https://forum.aionlegend.im/index.php" target="_blank">点我进入官网</a> </p>
-            <img src="../../assets/icons/luntanhome.png" width="800px" height="300px" alt="">
-            <p>点击登入</p>
-            <img src="../../assets/icons/denglu.png" width="800px" height="400px" alt="">
-            <p>登陆成功</p>
-            <img src="../../assets/icons/accountinfo1.png" width="800px" height="300px" alt="">
-            <img src="../../assets/icons/accountinfo2.png" width="420px" height="400px" alt="">
-          </a-card>
-        </a-col>
-        <a-col
-          :xl="24"
-          :lg="24"
-          :md="24"
-          :sm="24"
-          :xs="24"
-          id="jiasu">
-          <a-card title="加速器" :bordered="false">
-            <p>俄服基本必须用加速器才能游戏，登录游戏尝试觉着不行买加速器，推荐使用腾讯加速器，<a href="https://jiasu.qq.com/?ADTAG=sem.baidu.ppc">点击购买</a></p>
-          </a-card>
-        </a-col>
-      </a-row>
-    </div>
+              </div>
+            </a-card>
+          </a-col>
+        </a-row>
+      </a-row></div>
   </page-view>
 </template>
 
@@ -84,11 +67,10 @@
 import {
   timeFix
 } from '@/utils/util'
-// import {
-//   mapState
-// } from 'vuex'
-// import axios from 'axios'
-// import $ from 'jquery'
+import {
+  mapState
+} from 'vuex'
+
 import {
   PageView
 } from '@/layouts'
@@ -97,10 +79,15 @@ import {
   Radar
 } from '@/components'
 
+import {
+  getRoleList,
+  getServiceList
+} from '@/api/manage'
+
 const DataSet = require('@antv/data-set')
 
 export default {
-  name: 'Monitor',
+  name: 'Begin',
   components: {
     PageView,
     HeadInfo,
@@ -183,58 +170,37 @@ export default {
         c: 40
       }
       ],
-      radarData: [],
-      onlineNumL: null
+      radarData: []
     }
   },
-
+  computed: {
+    ...mapState({
+      nickname: (state) => state.user.nickname,
+      welcome: (state) => state.user.welcome
+    }),
+    userInfo () {
+      return this.$store.getters.userInfo
+    }
+  },
   created () {
+    this.user = this.userInfo
+    this.avatar = this.userInfo.avatar
 
+    getRoleList().then(res => {
+      // console.log('begin -> call getRoleList()', res)
+    })
+
+    getServiceList().then(res => {
+      // console.log('begin -> call getServiceList()', res)
+    })
   },
   mounted () {
+    this.getProjects()
+    this.getActivity()
+    this.getTeams()
+    this.initRadar()
   },
   methods: {
-    getOnlineNum () {
-      // axios.get('https://www.aionlegend.im/index.php',{}, {
-      //   headers: { Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
-      //   referer:'https://cp.aionlegend.im/',
-      //   host:'cp.aionlegend.im'
-      // }}).then(res => {
-      //   console.log(res)
-      //   setTimeout(() => {
-      //     this.getOnlineNum()
-      //   }, 10000)
-      // })
-      //       var url = "https://www.aionlegend.im/index.php";
-      // //     // 创建script标签，设置其属性
-      //     var script = document.createElement('script');
-      //     script.setAttribute('src', url);
-      // console.log(script);
-      // document.getElementsByTagName('head')[0].appendChild(script);
-      // console.log('222')
-
-      // let headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
-      // 'referer': 'https://cp.aionlegend.im',
-      // 'sec-fetch-mode': 'cors',
-      // 'sec-fetch-site': 'same-origin',
-      // 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
-      // }
-      //     $.ajax({
-      //           type: "GET",
-      //           async: false,
-      //           url: "https://www.aionlegend.im/index.php",
-      //           data: {},
-      //           headers:headers,
-      //           jsonpCallback:"jsonpCallback",
-      //           dataType: "jsonp",
-      //           success: function() { console.log('Success!'); },
-      //     error: function(res) { console.log(res); },
-      //       });
-      //       function jsonpCallback(data) {
-      //         console.log(data);
-
-      //       }
-    },
     getProjects () {
       this.$http.get('/list/search/projects')
         .then(res => {
