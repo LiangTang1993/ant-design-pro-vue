@@ -238,7 +238,7 @@ export default {
         })
     },
     register () {
-      window.open('https://www.aionlegend.im/r/?invite=NS1I27')
+      window.open('http://www.aionlegend.net/register.html')
     },
     downLoad () {
 

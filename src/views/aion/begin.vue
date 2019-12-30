@@ -84,6 +84,7 @@
                 360急速浏览器：点击右侧三个横行，点击工具，管理扩展</p>
               <img src="../../assets/icons/guge.png" alt="" width="500px" height="500px">
               <p>3.点击加载已解压的扩展程序，选择我们刚刚下载解压后的文件夹即可，然后就安装成功了，如果没有显示可以重启一下浏览器</p>
+              <img src="../../assets/icons/guge2.png" alt="" >
               <a-divider></a-divider>
               <div id="registerHelp">
                 <h3>注册： <a @click="register">点我注册有福利</a></h3>
@@ -332,7 +333,7 @@ export default {
         })
     },
     register () {
-      window.open('https://www.aionlegend.im/r/?invite=NS1I27')
+      window.open('http://www.aionlegend.net/register.html')
     },
     downLoad () {
 

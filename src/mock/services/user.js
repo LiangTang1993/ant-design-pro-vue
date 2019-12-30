@@ -443,28 +443,37 @@ const userNav = (options) => {
         'title': '五倍经验购买',
         'show': true
       }
-    }
+    },
 
-    // {
-    //   'name': 'analysis',
-    //   'parentId': 1,
-    //   'id': 2,
-    //   'meta': {
-    //     'title': '分析页',
-    //     'show': true
-    //   },
-    //   'component': 'Analysis'
-    // },
-    // {
-    //   'name': 'tests',
-    //   'parentId': 1,
-    //   'id': 8,
-    //   'meta': {
-    //     'title': '测试功能',
-    //     'show': true
-    //   },
-    //   'component': 'TestWork'
-    // },
+    {
+      'name': 'act',
+      'parentId': -1,
+      'id': 11,
+      'meta': {
+        'title': '活动',
+        'show': true
+      },
+      'component': 'RouteView',
+      'redirect': '/act/actNewYare'
+    },
+    {
+      'name': 'actNewYare',
+      'parentId': 11,
+      'id': 12,
+      'meta': {
+        'title': '新年活动',
+        'show': true
+      }
+    },
+    {
+      'name': 'wafen',
+      'parentId': 11,
+      'id': 13,
+      'meta': {
+        'title': '古墓活动',
+        'show': true
+      }
+    }
 
     // // form
     // {

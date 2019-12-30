@@ -81,13 +81,13 @@ export default {
   },
   methods: {
     register () {
-      window.open('https://www.aionlegend.im/r/?invite=NS1I27')
+      window.open('http://www.aionlegend.net/register.html')
     },
     downLoad () {
 
     },
     confirm () {
-      window.open('https://pan.baidu.com/s/1yRMDPjybgT5v3vZDku8awQ ')
+      window.open('https://pan.baidu.com/s/1gdSNpIoM_jGQgBu1IpivBA')
     }
   }
 }

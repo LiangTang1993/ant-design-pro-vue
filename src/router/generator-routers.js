@@ -20,7 +20,10 @@ const constantRouterComponents = {
   'monitor': () => import('@/views/aion/Monitor'),
   'levelQuick': () => import('@/views/aion/level/levelQuick'),
   'levelUp': () => import('@/views/aion/level/levelUp'),
+  'actNewYare': () => import('@/views/aion/act/actNewYare'),
+  'wafen': () => import('@/views/aion/act/wafen'),
   'fiveExp': () => import('@/views/aion/level/fiveExp')
+
   // // form
   // 'BasicForm': () => import('@/views/form/BasicForm'),
   // 'StepForm': () => import('@/views/form/stepForm/StepForm'),
